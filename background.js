@@ -15,8 +15,3 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         });
     }
 });
-
-function extractSubtitles() {
-    console.log("Subtitle extraction triggered!");
-    // Your subtitle extraction logic goes here
-}
