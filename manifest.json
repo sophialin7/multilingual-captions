@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Subtitle Extractor",
+  "version": "1.0",
+  "description": "Extract subtitles from YouTube videos.",
+  "permissions": ["activeTab", "scripting", "contextMenus"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.webp"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"]
+    }
+  ]
+}

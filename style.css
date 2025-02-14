@@ -1,0 +1,6 @@
+body {
+    width: 500px; /* Make popup larger */
+    height: 400px;
+    font-family: Arial, sans-serif;
+    padding: 15px;
+}
