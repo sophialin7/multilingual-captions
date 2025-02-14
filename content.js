@@ -30,8 +30,6 @@ async function fetchSubtitles() {
     }
 }
 
-getSubtitles();
-
 
 // Run script when the page loads
 fetchSubtitles();
