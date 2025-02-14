@@ -30,37 +30,6 @@ async function fetchSubtitles() {
     }
 }
 
-async function getSubtitles() {
-    const videoId = new URLSearchParams(window.location.search).get("v");
-    if (!videoId) {
-        console.error("No video ID found.");
-        return;
-    }
-
-    try {
-        const response = await fetch(`https://www.youtube.com/api/timedtext?lang=en&v=${videoId}`);
-        const text = await response.text();
-        if (!text) {
-            console.log("No subtitles available.");
-            return;
-        }
-
-        // Convert XML subtitles to readable text
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(text, "text/xml");
-        const subtitles = Array.from(xml.getElementsByTagName("text"))
-            .map(node => node.textContent)
-            .join("\n");
-
-        console.log("Extracted Subtitles:", subtitles);
-
-        // Send subtitles to popup
-        chrome.runtime.sendMessage({ subtitles });
-    } catch (error) {
-        console.error("Failed to fetch subtitles:", error);
-    }
-}
-
 getSubtitles();
 
 
