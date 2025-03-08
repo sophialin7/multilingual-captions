@@ -1,6 +1,42 @@
 body {
-    width: 500px; /* Make popup larger */
-    height: 400px;
     font-family: Arial, sans-serif;
-    padding: 15px;
+    padding: 10px;
+    width: 250px;
 }
+h2 {
+    font-size: 16px;
+}
+button {
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+    body {
+      width: 1000px; /* Increase width to make the popup wider */
+      height: 1000px; /* Increase height to make the popup taller */
+      padding: 20px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #title, #views, #duration, #captions {
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
