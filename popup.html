@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Subtitle Extractor</title>
-    <link rel="stylesheet" href="style.css">
-    <style>body { font-family: Arial, sans-serif; text-align: center; }</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Metadata</title>
 </head>
 <body>
-    <h2>YouTube Subtitles</h2>
-    <button id="subtitles">Extract Subtitles</button>
-    <pre id="output"></pre>
-    <script src="popup.js"></script>
-    <script script src="popup.js"></script>
+    <h1>Enter YouTube Video URL</h1>
+    <input type="text" id="videoUrl" placeholder="Enter YouTube URL" />
+    <button id="fetchData">Fetch Metadata</button>
 
-        <!-- // document.getElementById("get-subtitles").addEventListener("click", () => {
-        //     chrome.scripting.executeScript({
-        //         target: { tabId: chrome.tabs.TAB_ID_CURRENT },
-        //         function: fetchSubtitles
-            // });
-        // }); -->
-    </script>
+    <div id="metadata">
+        <p><strong>Title:</strong> <span id="title">N/A</span></p>
+        <p><strong>Views:</strong> <span id="views">N/A</span></p>
+        <p><strong>Duration:</strong> <span id="duration">N/A</span></p>
+        <p><strong>Captions:</strong> <span id="captions">N/A</span></p>
+    </div>
+
+    <script src="popup.js"></script>
 </body>
 </html>
