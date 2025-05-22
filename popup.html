@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multilingual YouTube Captions</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        select, button {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+        button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357abd;
+        }
+        .option-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #status {
+            color: #4285f4;
+            text-align: center;
+            min-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="option-group">
+            <label for="mode">Mode:</label>
+            <select id="mode">
+                <option value="transliterate">Transliterate (Convert Script)</option>
+                <option value="translate">Translate (Convert Language)</option>
+            </select>
+        </div>
+
+        <div class="option-group">
+            <label for="fromLanguage">From Language:</label>
+            <select id="fromLanguage">
+                <option value="">Loading available languages...</option>
+            </select>
+        </div>
+
+        <div class="option-group">
+            <label for="toLanguage">To:</label>
+            <select id="toLanguage">
+                <option value="">Loading options...</option>
+            </select>
+        </div>
+
+        <div id="status"></div>
+        <button id="applySettings">Apply Settings</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
