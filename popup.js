@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyCRl5Yh4mabGYU56dKR7YP9OTUnC-nItlY"; // Replace with your YouTube API key
+const API_KEY = "AIzaSyCRl5Yh4mabGYU56dKR7YP9OTUnC-nItlY"; 
 
 document.getElementById("fetchData").addEventListener("click", async function () {
     let url = document.getElementById("videoUrl").value;
